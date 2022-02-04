@@ -1,9 +1,9 @@
 /**
- * Author:	Luca
- * Github:	https://github.com/lucadev23
- * Twitch:	https://www.twitch.tv/lucadav
- * Created:	17.05.2021
- * Modified: 04.02.2022
+ * Author:  Luca
+ * Github:  https://github.com/lucadev23
+ * Twitch:  https://www.twitch.tv/lucadav
+ * Created: 17.05.2021
+ * Modified:    04.02.2022
  * version: 2.0
  **/
 
@@ -12,7 +12,7 @@
 #include <stdbool.h>
 #include <string.h>
 #include <unistd.h>
-#include<fcntl.h>
+#include <fcntl.h>
 #include "definitions.h"
 
 void contaQuantiJPEG(int*, unsigned int*);
@@ -61,6 +61,7 @@ int main(int argc, char* argv[]){
     estrapolaJPEG(&fileIn, offset_jpeg, &num_jpeg);
 
     close(fileIn);
+    free(offset_jpeg);
     return EXIT_SUCCESS;
 }
 
